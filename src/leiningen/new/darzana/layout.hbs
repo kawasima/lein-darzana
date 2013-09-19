@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+      body { margin-top: 50px; }
+    </style>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="navbar-brand">{{name}}</a>
+        </div>
+      </div>
+    </div>
+    {{=<% %>=}}
+    <div class="container">
+      {{#block "content"}}
+      This will be default content that appears in a
+      deriving template if it does not declare a
+      replacement for the "content" section.
+      {{/block}}
+    </div>
+    {{debug}}
+  </body>
+</html>
