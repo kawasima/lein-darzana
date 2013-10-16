@@ -4,6 +4,6 @@
           (->)
           (call-api [twitter-authorize]))
       (call-api [twitter-timeline])
-      (store-session :twitter-authorize [:twitter-authorize])  
+      (store-session :twitter-authorize)
       (render "index"))
     (render "guide")))

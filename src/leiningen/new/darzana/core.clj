@@ -6,7 +6,8 @@
     [compojure.route :as route]
     [compojure.core :as compojure]
     [compojure.handler :as handler]
-    [ring.middleware.reload :as reload]))
+    [ring.middleware.reload :as reload]
+    [darzana.workspace :as workspace]))
 
 (def app
   (do
