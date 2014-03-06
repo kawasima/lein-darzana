@@ -4,6 +4,16 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [ [org.clojure/clojure "1.5.1"]
-                  [net.unit8/darzana "0.1.0-RC1"]]
-  :plugins [[lein-ring "0.8.7"]]
-  :ring {:handler {{name}}.core/app})
+                  [net.unit8/darzana "0.2.0-SNAPSHOT"]
+                  [javax.servlet/servlet-api "2.5"]
+                  [ring/ring-devel "1.2.1"]
+                  [http-kit "2.1.17"]]
+  :plugins [[lein-ring "0.8.10"]]
+
+  :source-paths ["src/clj"]
+  :test-paths   ["test/clj"]
+  :resource-paths ["resources"]
+
+  :ring {:handler {{name}}.core/app}
+  :aot [{{name}}.core]
+  :main {{name}}.core)
